@@ -70,8 +70,14 @@ const ACHIEVEMENTS = [
   { label: "OpenBugBounty Hunter", detail: "Actively reporting, learning, iterating." },
 ];
 
+
 // ======== tiny utilities ========
-const useTyping = (lines, speed = 35, hold = 1000) => {
+const useTyping = (
+  lines: string[],    // ✅ type added
+  speed: number = 35,
+  hold: number = 1000
+) => {
+
   const [display, setDisplay] = useState("");
   const [lineIdx, setLineIdx] = useState(0);
   const [done, setDone] = useState(false);
